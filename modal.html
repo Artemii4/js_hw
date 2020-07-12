@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <Style>
+
+
+        .modal{
+            display:none;
+            width: 400px;
+            height: 200px;
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%);
+            border: 1px solid green;
+            padding: 22px;
+            background: #fff;
+        }
+    </Style>
+</head>
+<body>
+    <button id="btn">Show modal</button>
+    <div class='modal'>
+        <button id='claseBtn'>x</button>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere quaerat, eius adipisci voluptatibus repellat autem tempora enim quia ipsam impedit non accusamus maiores suscipit? Tenetur molestias dolor animi molestiae voluptatum?</p>
+    </div>
+    <script>
+        var modal=document.querySelector('.modal');
+        var btnShowModal=document.querySelector('#btn')
+        var btnClose=document.getElementById('closeBtn');
+        console.log(btnShowModal);
+
+        btnShowModal.addEventListener('click', function(){
+            modal.style.dispaly='block';
+            document.body.style.background='rgba(0,0,0,0,4)';
+        });
+
+        btnClose.addEventListener('click', function(){
+            modal.style.dispaly='none';
+            document.body.style.background='#fff';
+        });
+
+    </script>
+</body>
+</html>
