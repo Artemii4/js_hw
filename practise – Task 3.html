@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 6 Practise</title>
+</head>
+<body>
+
+    <!-- 
+       
+3. Допишите функцию countOnline; используйте оператор for ... in в этой функции для циклического обхода пользователей в объекте users и возврата количества пользователей, для которых для свойства онлайн установлено значение true.
+
+        let users = {
+            Alan: {
+                age: 27,
+                online: false
+            },
+            Jeff: {
+                age: 32,
+                online: true
+            },
+            Sarah: {
+                age: 48,
+                online: false
+            },
+            Ryan: {
+                age: 19,
+                online: true
+            }
+        };
+
+        function countOnline(obj) {}
+
+        console.log(countOnline(users));
+                
+     -->
+     <script>
+         let users = {
+            Alan: {
+                age: 27,
+                online: false
+            },
+            Jeff: {
+                age: 32,
+                online: true
+            },
+            Sarah: {
+                age: 48,
+                online: false
+            },
+            Ryan: {
+                age: 19,
+                online: true
+            }
+        };
+
+        function countOnline(obj) {
+           for(var res in users)
+               for( var status in users[res]){
+                   if(status == 'online') {
+                       if(users[res][status] == true) {
+                            console.log(users[res])
+                       }
+                   }
+               }
+       }
+        console.log(countOnline(users));
+     </script>
+</body>
+</html>

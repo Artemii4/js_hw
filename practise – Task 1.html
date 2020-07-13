@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 6 Practise</title>
+</head>
+<body>
+
+    <!-- 
+         1. Объект user содержит три свойства. Свойство data содержит пять свойств, один из которых содержит массив friends. Завершите запись функции addFriend, которая принимает объект user и имя друга(friend), и добавляет имя друга(friend) в массив friends. Функция должна возвращать массив friends.
+
+            let user = {
+                name: 'Kenneth',
+                age: 28,
+                data: {
+                    username: 'kennethCodesAllDay',
+                    joinDate: 'March 26, 2016',
+                    organization: 'freeCodeCamp',
+                    friends: [
+                    'Sam',
+                    'Kira',
+                    'Tomo'
+                    ],
+                    location: {
+                    city: 'San Francisco',
+                    state: 'CA',
+                    country: 'USA'
+                    }
+                }
+            };
+
+            function addFriend(userObj, friend) {}
+
+            console.log(addFriend(user, 'Pete'));
+
+            
+            
+     -->
+
+     <script>
+          let user = {
+                name: 'Kenneth',
+                age: 28,
+                data: {
+                    username: 'kennethCodesAllDay',
+                    joinDate: 'March 26, 2016',
+                    organization: 'freeCodeCamp',
+                    friends: [
+                    'Sam',
+                    'Kira',
+                    'Tomo'
+                    ],
+                    location: {
+                    city: 'San Francisco',
+                    state: 'CA',
+                    country: 'USA'
+                    }
+                }
+            };
+
+            function addFriend(userObj, friendName) {
+                userObj.data.friends.push(friendName);
+                return userObj.data.friends
+            };
+
+            console.log(addFriend(user, 'Pete'));
+
+     </script>
+</body>
+</html>
